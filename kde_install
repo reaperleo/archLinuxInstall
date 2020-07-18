@@ -1,0 +1,9 @@
+#!/bin/bash
+
+pacman -S xorg xorg-server xorg-xinit
+
+pacman -S alsa-firmware alsa-utils alsa-oss pulseaudio pulseaudio-alsa
+
+pacman -S plasma-meta kde-applications-meta zsh
+
+systemctl enable sddm
