@@ -46,7 +46,7 @@ mount -t btrfs -o subvol=@home,$o_btrfs LABEL=Arch /mnt/home
 mount -t btrfs -o subvol=@srv,$o_btrfs LABEL=Arch /mnt/srv
 mount -t btrfs -o subvol=@tmp,$o_btrfs LABEL=Arch /mnt/tmp
 mount -t btrfs -o subvol=@opt,$o_btrfs LABEL=Arch /mnt/opt
-mount -t btrfs -o subvol=@snapshots,$o_btrfs LABEL=Arch /mnt/.snapshots
+mount -t btrfs -o subvol=@.snapshots,$o_btrfs LABEL=Arch /mnt/.snapshots
 mount -t btrfs -o subvol=@swap,nodatacow LABEL=Arch /mnt/swap
 mount -t btrfs -o subvol=@var,nodatacow LABEL=Arch /mnt/var
 mount /dev/nvme0n1p1 /mnt/boot
@@ -54,6 +54,8 @@ mount /dev/nvme0n1p1 /mnt/boot
 pacstrap /mnt base base-devel linux linux-firmware vim intel-ucode btrfs-progs
 
 genfstab -U /mnt >> /mnt/etc/fstab 
+
+cp chroot.sh /mnt/root/
 
 arch-chroot /mnt
 
