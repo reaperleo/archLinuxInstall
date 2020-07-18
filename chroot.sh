@@ -27,7 +27,7 @@ locale-gen
 
 passwd
 
-pacman -S grub grub-btrfs efibootmgr networkmanager network-manager-applet wpa_supplicant dialog os-prober mtools dosfstools linux-headers git reflector bluez bluez-utils cups xdg-utils xdg-user-dirs
+pacman -S grub grub-btrfs efibootmgr networkmanager network-manager-applet wpa_supplicant dialog os-prober mtools dosfstools linux-headers git reflector bluez bluez-utils cups xdg-utils xdg-user-dirs ntfs-3g
 
 useradd -mG wheel reaper
 passwd reaper
