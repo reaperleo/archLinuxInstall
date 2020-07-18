@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -S xorg xorg-server xorg-xinit
+pacman -S xorg xorg-server xorg-xinit xf86-video-intel
 
 pacman -S alsa-firmware alsa-utils alsa-oss pulseaudio pulseaudio-alsa
 
