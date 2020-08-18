@@ -5,7 +5,7 @@ truncate -s 0 /swap/swapfile
 chattr +C /swap/swapfile
 btrfs property set /swap/swapfile compression none
 dd if=/dev/zero of=/swap/swapfile bs=1G count=8 status=progress
-mkswap swap/swapfile
+mkswap /swap/swapfile
 swapon /swap/swapfile
 
 echo "/swap/swapfile none swap defaults 0 0" >> /etc/fstab
@@ -38,7 +38,7 @@ passwd reaper
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader=GRUB
 
-grub-mkconfig -o /boot//grub/grub.cfg 
+grub-mkconfig -o /boot/grub/grub.cfg 
 
 systemctl enable NetworkManager
 
